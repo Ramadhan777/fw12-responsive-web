@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style/sign-up.css" />
+    <title>Sign In</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <main class="auth-wrap">
+      <section class="box-bg">
+        <div class="logo">
+          <img src="./assets/img/tickitz 1.svg" alt="" />
+          <p>wait, watch, wow!</p>
+        </div>
+      </section>
+
+      <section class="sign-in">
+        <img src="./assets/img/logo.svg" alt="tickitz" />
+        <h1>Sign In</h1>
+        <p>Sign in with your data that you entered during your registration</p>
+        <form class="form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Write your email" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="password">
+              <input type="password" name="password" id="password" placeholder="Write your password" />
+              <div class="eye-password">
+                <i data-feather="eye"></i>
+              </div>
+            </div>
+          </div>
+          <div class="btn-sign-in">
+            <button type="submit"><a href="homepage.html">
+              Sign In
+            </a></button>
+            <div>
+              <p><span>Forgot your password? </span> <a href="resetPassword.html">Reset now</a></p>
+              <p><span>Don’t have an account? </span> <a href="sign-up.html">Sign Up</a></p>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
