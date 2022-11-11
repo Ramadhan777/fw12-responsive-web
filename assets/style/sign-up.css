@@ -74,10 +74,10 @@ body {
   font-style: normal;
   font-weight: 600;
   font-size: 2em;
-  padding: 50px 0 0;
+  padding: 30px 0 0;
 }
-.sign-up p:nth-child(2),
-.sign-in > p:nth-child(2) {
+.sign-up p:nth-child(3),
+.sign-in > p:nth-child(3) {
   font-family: "Inter";
   opacity: 0.5;
   position: relative;
@@ -2320,7 +2320,6 @@ footer > div:nth-child(2) {
   }
 
   .sign-in {
-    text-align: center;
     width: 80%;
     margin: 0 auto;
   }
@@ -2339,7 +2338,7 @@ footer > div:nth-child(2) {
   .sign-up > img:nth-child(1),
   .content > img:nth-child(1) {
     display: block;
-    margin: 50px 0px 50px;
+    margin: 30px 0px 30px;
   }
 
   .content > img:nth-child(1) {

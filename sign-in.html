@@ -21,6 +21,7 @@
         <img src="./assets/img/logo.svg" alt="tickitz" />
         <h1>Sign In</h1>
         <p>Sign in with your data that you entered during your registration</p>
+        <div class="alert"></div>
         <form class="form">
           <div class="form-group">
             <label for="email">Email</label>
@@ -36,9 +37,7 @@
             </div>
           </div>
           <div class="btn-sign-in">
-            <button type="submit"><a href="homepage.html">
-              Sign In
-            </a></button>
+            <button type="submit">Sign In</button>
             <div>
               <p><span>Forgot your password? </span> <a href="resetPassword.html">Reset now</a></p>
               <p><span>Don’t have an account? </span> <a href="sign-up.html">Sign Up</a></p>
@@ -50,6 +49,33 @@
 
     <script>
       feather.replace();
+
+      const alertLogin = document.querySelector('.alert')
+      const formData = document.querySelector('.form')
+      formData.addEventListener('submit', (event) => {
+        if(event.target.email.value === "fajri@gmail.com" && event.target.password.value === "13579") {
+          alertLogin.innerText = "Login Berhasil"
+          alertLogin.style.backgroundColor = "lightgreen"
+          alertLogin.style.display = "inline-block"
+          alertLogin.style.padding = "10px 50px 10px 15px"
+          alertLogin.style.borderRadius = "16px"
+          alertLogin.style.marginBottom = "10px"
+          
+          setInterval(() => {
+            window.location = '/homepage.html'
+          }, 5000)
+        }
+        else{
+          alertLogin.innerText = "Login Gagal"
+          alertLogin.style.backgroundColor = "rgb(255, 70, 70)"
+          alertLogin.style.display = "inline-block"
+          alertLogin.style.padding = "10px 50px 10px 15px"
+          alertLogin.style.borderRadius = "16px"
+          alertLogin.style.marginBottom = "10px"
+        }
+        event.preventDefault()
+      })
     </script>
+   
   </body>
 </html>
