@@ -141,50 +141,7 @@
         </div>
       </div>
 
-      <div class="list-movie">
-        <div>
-          <img src="./assets/img/movie-4.svg" alt="" />
-
-          <h4>Black Widow</h4>
-          <p>Action, Adventure, Sci-Fi</p>
-          <button><a href="view-all.html">Details</a></button>
-        </div>
-        <div>
-          <img src="./assets/img/movie-5.svg" alt="" />
-
-          <h4>The Witches</h4>
-          <p>Adventure, Comedy, Family</p>
-          <button><a href="view-all.html">Details</a></button>
-        </div>
-        <div>
-          <img src="./assets/img/movie-3.svg" alt="" />
-
-          <h4>John Wick 3</h4>
-          <p>Action, Sci-Fi</p>
-          <button><a href="view-all.html">Details</a></button>
-        </div>
-        <div>
-          <img src="./assets/img/movie-4.svg" alt="" />
-
-          <h4>Black Widow</h4>
-          <p>Action, Adventure, Sci-Fi</p>
-          <button><a href="view-all.html">Details</a></button>
-        </div>
-        <div>
-          <img src="./assets/img/movie-5.svg" alt="" />
-
-          <h4>The Witches</h4>
-          <p>Adventure, Comedy, Family</p>
-          <button><a href="view-all.html">Details</a></button>
-        </div>
-        <div>
-          <img src="./assets/img/movie-3.svg" alt="" />
-
-          <h4>John Wick</h4>
-          <p>Action, Sci-Fi</p>
-          <button><a href="view-all.html">Details</a></button>
-        </div>
-      </div>
+      <div class="list-movie"></div>
     </section>
 
     <section class="email">
@@ -263,6 +220,62 @@
     <script src="./assets/js/script.js"></script>
     <script>
       feather.replace();
+
+      const movies = [
+        {
+          picture: "./assets/img/movie-4.svg",
+          title: "Black WIdow",
+          genre: "Action, Adventure, Sci-Fi",
+          link: "view-all.html",
+        },
+        {
+          picture: "./assets/img/movie-5.svg",
+          title: "The Withces",
+          genre: "Adventure, Comedy, Family",
+          link: "view-all.html",
+        },
+        {
+          picture: "./assets/img/movie-3.svg",
+          title: "John Wick 3",
+          genre: "Action, Sci-Fi",
+          link: "view-all.html",
+        },
+        {
+          picture: "./assets/img/movie-4.svg",
+          title: "Black WIdow",
+          genre: "Action, Adventure, Sci-Fi",
+          link: "view-all.html",
+        },
+        {
+          picture: "./assets/img/movie-5.svg",
+          title: "The Withces",
+          genre: "Adventure, Comedy, Family",
+          link: "view-all.html",
+        },
+        {
+          picture: "./assets/img/movie-3.svg",
+          title: "John Wick 3",
+          genre: "Action, Sci-Fi",
+          link: "view-all.html",
+        },
+      ];
+
+      const upcomingMovies = document.querySelector(".upcoming-movies .list-movie");
+
+      let listMovies = "";
+
+      movies.forEach((movie) => {
+        listMovies = listMovies +
+          `<div>
+            <img src="${movie.picture}" alt="image" />
+
+            <h4>${movie.title}</h4>
+            <p>${movie.genre}</p>
+            <button><a href="${movie.link}">Details</a></button>
+          </div>`;
+      });
+
+      upcomingMovies.innerHTML = listMovies;
     </script>
   </body>
 </html>

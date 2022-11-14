@@ -44,7 +44,8 @@
             <div class="password">
               <input type="password" name="password" id="password" placeholder="Write your password" />
               <div class="eye-password">
-                <i data-feather="eye"></i>
+                <i class="eye off" data-feather="eye-off"></i>
+                <i class="eye on" data-feather="eye"></i>
               </div>
             </div>
           </div>
@@ -57,6 +58,23 @@
 
     <script>
       feather.replace();
+
+      const password = document.querySelector('#password')
+      const eyePass = document.querySelector('.eye-password')
+      const eyeOn = document.querySelector(".eye.on")
+      const eyeOff = document.querySelector(".eye.off")
+
+      eyePass.addEventListener("click", () => {
+        if(password.type === "password"){
+          password.setAttribute('type', 'text')
+          eyeOff.style.display = "none"
+          eyeOn.style.display = "block"
+        } else {
+          password.setAttribute('type', 'password')
+          eyeOff.style.display = "block"
+          eyeOn.style.display = "none"
+        }
+       } )
     </script>
   </body>
 </html>

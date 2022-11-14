@@ -207,6 +207,10 @@ input[type="email"] {
   padding: 30px 10px 0;
 }
 
+.eye.on {
+  display: none;
+}
+
 .form button {
   font-family: "Mulish";
   margin-top: 7px;

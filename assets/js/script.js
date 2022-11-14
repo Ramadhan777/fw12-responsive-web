@@ -12,3 +12,4 @@ mainElement.addEventListener('click', event => {
     navDropElement.classList.remove('open');
     event.stopPropagation();
   });
+

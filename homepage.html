@@ -95,54 +95,8 @@
       </div>
 
       <div class="list-movie two">
-        <div>
-          <img src="./assets/img/movie-1.svg" alt="" />
-          <div>
-            <h4>Spider-Man: Homecoming</h4>
-            <p>Action, Adventure, Sci-FI</p>
-            <button><a href="view-all.html">Details</a></button>
-          </div>
-        </div>
-        <div>
-          <img src="./assets/img/movie-2.svg" alt="" />
-          <div>
-            <h4>The Lion King</h4>
-            <p>Adventure, Sci-FI</p>
-            <button><a href="view-all.html">Details</a></button>
-          </div>
-        </div>
-        <div>
-          <img src="./assets/img/movie-3.svg" alt="" />
-          <div>
-            <h4>John Wick 3</h4>
-            <p>Action, Adventure, Sci-FI</p>
-            <button><a href="view-all.html">Details</a></button>
-          </div>
-        </div>
-        <div>
-          <img src="./assets/img/movie-1.svg" alt="" />
-          <div>
-            <h4>Spider-Man: Homecoming</h4>
-            <p>Action, Adventure, Sci-FI</p>
-            <button><a href="view-all.html">Details</a></button>
-          </div>
-        </div>
-        <div>
-          <img src="./assets/img/movie-2.svg" alt="" />
-          <div>
-            <h4>The Lion King</h4>
-            <p>Adventure, Sci-FI</p>
-            <button><a href="view-all.html">Details</a></button>
-          </div>
-        </div>
-        <div>
-          <img src="./assets/img/movie-3.svg" alt="" />
-          <div>
-            <h4>John Wick 3</h4>
-            <p>Action, Adventure, Sci-FI</p>
-            <button><a href="view-all.html">Details</a></button>
-          </div>
-        </div>
+        
+       
       </div>
     </section>
 
@@ -196,42 +150,7 @@
       </div>
 
       <div class="list-movie">
-        <div>
-          <img src="./assets/img/movie-4.svg" alt="" />
-          <h4>Black Widow</h4>
-          <p>Action, Adventure, Sci-Fi</p>
-          <button><a href="view-all.html">Details</a></button>
-        </div>
-        <div>
-          <img src="./assets/img/movie-5.svg" alt="" />
-          <h4>The Witches</h4>
-          <p>Adventure, Comedy, Family</p>
-          <button><a href="view-all.html">Details</a></button>
-        </div>
-        <div>
-          <img src="./assets/img/movie-3.svg" alt="" />
-          <h4>John Wick 3</h4>
-          <p>Action, Sci-Fi</p>
-          <button><a href="view-all.html">Details</a></button>
-        </div>
-        <div>
-          <img src="./assets/img/movie-4.svg" alt="" />
-          <h4>Black Widow</h4>
-          <p>Action, Adventure, Sci-Fi</p>
-          <button><a href="view-all.html">Details</a></button>
-        </div>
-        <div>
-          <img src="./assets/img/movie-5.svg" alt="" />
-          <h4>The Witches</h4>
-          <p>Adventure, Comedy, Family</p>
-          <button><a href="view-all.html">Details</a></button>
-        </div>
-        <div>
-          <img src="./assets/img/movie-3.svg" alt="" />
-          <h4>John Wick</h4>
-          <p>Action, Sci-Fi</p>
-          <button><a href="view-all.html">Details</a></button>
-        </div>
+        
       </div>
     </section>
 
@@ -311,6 +230,117 @@
     <script src="./assets/js/script.js"></script>
     <script>
       feather.replace();
+
+      const movies = [
+        {
+          picture: "./assets/img/movie-4.svg",
+          title: "Black WIdow",
+          genre: "Action, Adventure, Sci-Fi",
+          link: "view-all.html",
+        },
+        {
+          picture: "./assets/img/movie-5.svg",
+          title: "The Withces",
+          genre: "Adventure, Comedy, Family",
+          link: "view-all.html",
+        },
+        {
+          picture: "./assets/img/movie-3.svg",
+          title: "John Wick 3",
+          genre: "Action, Sci-Fi",
+          link: "view-all.html",
+        },
+        {
+          picture: "./assets/img/movie-4.svg",
+          title: "Black WIdow",
+          genre: "Action, Adventure, Sci-Fi",
+          link: "view-all.html",
+        },
+        {
+          picture: "./assets/img/movie-5.svg",
+          title: "The Withces",
+          genre: "Adventure, Comedy, Family",
+          link: "view-all.html",
+        },
+        {
+          picture: "./assets/img/movie-3.svg",
+          title: "John Wick 3",
+          genre: "Action, Sci-Fi",
+          link: "view-all.html",
+        },
+      ];
+
+      const movies2 = [
+        {
+          picture: "./assets/img/movie-1.svg",
+          title: "Spider-Man: Homecoming",
+          genre: "Action, Adventure, Sci-Fi",
+          link: "view-all.html",
+        },
+        {
+          picture: "./assets/img/movie-2.svg",
+          title: "The Lion King",
+          genre: "Adventure, Sci-Fi",
+          link: "view-all.html",
+        },
+        {
+          picture: "./assets/img/movie-3.svg",
+          title: "John Wick 3",
+          genre: "Action, Sci-Fi",
+          link: "view-all.html",
+        },
+        {
+          picture: "./assets/img/movie-1.svg",
+          title: "Spider-Man: Homecoming",
+          genre: "Action, Adventure, Sci-Fi",
+          link: "view-all.html",
+        },
+        {
+          picture: "./assets/img/movie-2.svg",
+          title: "The Lion King",
+          genre: "Adventure, Sci-Fi",
+          link: "view-all.html",
+        },
+        {
+          picture: "./assets/img/movie-3.svg",
+          title: "John Wick 3",
+          genre: "Action, Sci-Fi",
+          link: "view-all.html",
+        },
+      ]
+
+      const upcomingMovies = document.querySelector(".upcoming-movies .list-movie");
+      const nowShowingMovies = document.querySelector(".now-showing .list-movie.two")
+
+      let listMovies1 = "";
+      let listMovies2 = "";
+
+      movies.forEach((movie) => {
+        listMovies1 = listMovies1 +
+          `<div>
+            <img src="${movie.picture}" alt="image" />
+
+            <h4>${movie.title}</h4>
+            <p>${movie.genre}</p>
+            <button><a href="${movie.link}">Details</a></button>
+          </div>`;
+      });
+
+
+      movies2.forEach(movie => {
+        listMovies2 = listMovies2 +
+        `<div>
+          <img src=${movie.picture} alt="" />
+          <div>
+            <h4>${movie.title}</h4>
+            <p>${movie.genre}</p>
+            <button><a href=${movie.link}>Details</a></button>
+          </div>
+        </div>`
+      })
+
+      upcomingMovies.innerHTML = listMovies1;
+      nowShowingMovies.innerHTML = listMovies2
     </script>
   </body>
 </html>
