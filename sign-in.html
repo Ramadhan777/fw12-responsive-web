@@ -31,9 +31,8 @@
             <label for="password">Password</label>
             <div class="password">
               <input type="password" name="password" id="password" placeholder="Write your password" />
-              <div class="eye-password">
+              <div class="eye-password" data-clicked="false">
                 <i class="eye off" data-feather="eye-off"></i>
-                <i class="eye on" data-feather="eye"></i>
               </div>
             </div>
           </div>
@@ -48,52 +47,9 @@
       </section>
     </main>
 
+    <script src="./assets/js/script.js"></script>
     <script>
-      feather.replace();
-
-      const alertLogin = document.querySelector('.alert')
-      const formData = document.querySelector('.form')
-      formData.addEventListener('submit', (event) => {
-        if(event.target.email.value === "fajri@gmail.com" && event.target.password.value === "13579") {
-          alertLogin.innerText = "Login Berhasil"
-          alertLogin.style.backgroundColor = "lightgreen"
-          alertLogin.style.display = "inline-block"
-          alertLogin.style.padding = "10px 50px 10px 15px"
-          alertLogin.style.borderRadius = "16px"
-          alertLogin.style.marginBottom = "10px"
-          
-          setInterval(() => {
-            window.location = '/homepage.html'
-          }, 5000)
-        }
-        else{
-          alertLogin.innerText = "Login Gagal"
-          alertLogin.style.backgroundColor = "rgb(255, 70, 70)"
-          alertLogin.style.display = "inline-block"
-          alertLogin.style.padding = "10px 50px 10px 15px"
-          alertLogin.style.borderRadius = "16px"
-          alertLogin.style.marginBottom = "10px"
-        }
-        event.preventDefault()
-      })
-
-      const password = document.querySelector('#password')
-      const eyePass = document.querySelector('.eye-password')
-      const eyeOn = document.querySelector(".eye.on")
-      const eyeOff = document.querySelector(".eye.off")
-
-      eyePass.addEventListener("click", () => {
-        if(password.type === "password"){
-          password.setAttribute('type', 'text')
-          eyeOff.style.display = "none"
-          eyeOn.style.display = "block"
-        } else {
-          password.setAttribute('type', 'password')
-          eyeOff.style.display = "block"
-          eyeOn.style.display = "none"
-        }
-       } )
+      feather.replace();    
     </script>
-   
   </body>
 </html>

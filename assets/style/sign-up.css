@@ -406,8 +406,7 @@ input[type="email"] {
 }
 
 .heading-right > div img {
-  margin-top: 10px;
-  width: 40vw;
+  width: 35vw;
 }
 
 .now-showing {
@@ -2354,7 +2353,7 @@ footer > div:nth-child(2) {
   }
 
   .heading-right > div img {
-    width: 50vw;
+    width: 350px;
   }
 
   .content {
@@ -2500,6 +2499,9 @@ footer > div:nth-child(2) {
 }
 
 @media screen and (max-width: 768px) {
+  .nav-bar .link{
+    margin: 0 0
+  }
   .box-bg p {
     font-size: 34px;
   }
@@ -2549,7 +2551,7 @@ footer > div:nth-child(2) {
   }
 
   .heading-right > div img {
-    width: 55vw;
+    width: 250px;
   }
 
   .heading-detail {
@@ -2739,7 +2741,7 @@ footer > div:nth-child(2) {
   }
 
   .heading-right > div img {
-    width: 100%;
+    width: 200px;
   }
 
   .heading-detail {
