@@ -54,7 +54,7 @@ if (document.title.toLowerCase() === "sign in") {
         window.location = "/homepage.html";
       }, 5000);
     } else {
-      alertLogin.innerText = "Login Gagal";
+      alertLogin.innerText = "Username atau Password salah";
       alertLogin.style.backgroundColor = "rgb(255, 70, 70)";
       alertLogin.style.display = "inline-block";
       alertLogin.style.padding = "10px 50px 10px 15px";
@@ -233,7 +233,7 @@ if (document.title.toLowerCase() === "list movies") {
   })
 
   const getMovies = async (keyword) => {
-    const response = await fetch("http://www.omdbapi.com/?apikey=85a0818b&s=" + keyword);
+    const response = await fetch("https://www.omdbapi.com/?apikey=85a0818b&s=" + keyword);
     const data = await response.json();
     const result = data.Search;
     return result;
@@ -248,7 +248,7 @@ if (document.title.toLowerCase() === "list movies") {
         <p>${movie.Genre}</p>
       </div>
       <div>
-        <button><a href="movieDetails.html">Details</a></button>
+        <button><a href="movieDetail.html">Details</a></button>
       </div>
     </div>
   </div>`
@@ -265,7 +265,7 @@ if (document.title.toLowerCase() === "list movies") {
 
   const getMovieDetail = async (movies) => {
     const movieDetail = await movies.map(async (movie) => {
-      const response = await fetch(`http://www.omdbapi.com/?apikey=85a0818b&i=${movie.imdbID}`)
+      const response = await fetch(`https://www.omdbapi.com/?apikey=85a0818b&i=${movie.imdbID}`)
       const detail = await response.json();
       return detail
     })
