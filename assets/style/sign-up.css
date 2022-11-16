@@ -474,17 +474,20 @@ input[type="email"] {
 .data-movie > div:nth-child(2) h4 {
   color: black;
   font-size: 16px;
+  text-align: center;
+  display: flex;
 }
 
 .now-showing .list-movie > div p,
 .upcoming-movies .list-movie > div p,
-.list-movies > div:nth-child(3) p,
+.list-movies > div:nth-child(3)  p,
 .data-movie > div:nth-child(2) p {
   color: black;
   position: relative;
   bottom: 15px;
   font-size: 12px;
   opacity: 0.7;
+  text-align: center;
 }
 
 .now-showing .list-movie > div button,
@@ -581,6 +584,11 @@ input[type="email"] {
   background: #fcfdfe;
   border: 1px solid #dedede;
   border-radius: 16px;
+  margin-left: 10px;
+}
+
+.list-movies > div input:nth-child(2):focus-visible{
+  outline: none;
 }
 
 .list-movies > div select, .data-movie > div select {
@@ -602,9 +610,10 @@ input[type="email"] {
   margin-top: 30px;
   background-color: #fff;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.list-movies > div:nth-child(3) div , 
+.list-movies > div:nth-child(3) > div , 
 .data-movie > div:nth-child(2) div {
   display: flex;
   flex-direction: column;
@@ -612,6 +621,25 @@ input[type="email"] {
   border-radius: 8px;
   padding: 30px;
   margin: 0 15px 40px;
+}
+
+.list-movies > div:nth-child(3) > div > img{
+  width: 150px;
+  height: 200px;
+}
+
+.list-movies > div:nth-child(3) > div > div {
+  display: flex;
+  flex-direction: column;
+  max-width: 150px;
+}
+
+.list-movies > div:nth-child(3) > div > div > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
 }
 
 .list-movies > div:nth-child(3) div button a ,
@@ -2730,11 +2758,16 @@ footer > div:nth-child(2) {
     display: block;
   }
 
+  .list-movies > div:nth-child(1){
+    flex-direction: column;
+  }
+
   .list-movies > div input:nth-child(2),
   .list-movies > div select,
   .data-movie > div input:nth-child(2), 
   .data-movie > div select {
     padding: 10px 5px;
+    margin: 0;
   }
 
   .movieData-wrap > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div > button {
