@@ -38,11 +38,10 @@ const movies = [
 ];
 
 if (document.title.toLowerCase() === "sign in") {
-  console.log("hello");
   const alertLogin = document.querySelector(".alert");
   const formData = document.querySelector(".form");
   formData.addEventListener("submit", (event) => {
-    if (event.target.email.value === "fajri@gmail.com" && event.target.password.value === "13579") {
+    if (event.target.email.value === "admin@gmail.com" && event.target.password.value === "13579") {
       alertLogin.innerText = "Login Berhasil";
       alertLogin.style.backgroundColor = "lightgreen";
       alertLogin.style.display = "inline-block";
@@ -71,11 +70,9 @@ if (document.title.toLowerCase() === "sign in") {
     if (password.type === "password") {
       password.setAttribute("type", "text");
       eyePass.innerHTML = feather.icons["eye"].toSvg();
-      eyePass.dataset.clicked = true;
     } else {
       password.setAttribute("type", "password");
       eyePass.innerHTML = feather.icons["eye-off"].toSvg();
-      eyePass.dataset.clicked = false;
     }
   });
 }
@@ -197,10 +194,9 @@ if (window.location.pathname === "/homepage.html") {
       listMovies1 +
       `<div>
         <img src="${movie.picture}" alt="image" />
-
-        <h4>${movie.title}</h4>
-        <p>${movie.genre.join(", ")}</p>
-        <button><a href="${movie.link}">Details</a></button>
+          <h4>${movie.title}</h4>
+          <p>${movie.genre.join(", ")}</p>
+          <button><a href="${movie.link}">Details</a></button>
       </div>`;
   });
 
@@ -208,25 +204,26 @@ if (window.location.pathname === "/homepage.html") {
     listMovies2 =
       listMovies2 +
       `<div>
-      <img src=${movie.picture} alt="" />
-      <div>
-        <h4>${movie.title}</h4>
-        <p>${movie.genre.join(", ")}</p>
-        <button><a href=${movie.link}>Details</a></button>
-      </div>
-    </div>`;
+        <img src=${movie.picture} alt="" />
+        <div>
+            <h4>${movie.title}</h4>
+            <p>${movie.genre.join(", ")}</p>
+            <button><a href=${movie.link}>Details</a></button>
+
+            </div>
+      </div>`;
   });
 
   upcomingMovies.innerHTML = listMovies1;
-  nowShowingMovies.innerHTML = listMovies2;
+  nowShowingMovies.innerHTML += listMovies2;
 }
 
 if (document.title.toLowerCase() === "list movies") {
   const inputSearch = document.querySelector(".search-movie");
+  const btnSearch = document.querySelector('.btn-search') 
   const movieContainer = document.querySelector('.list-movies > div:nth-child(3)')
   
-
-  inputSearch.addEventListener('change', async () => {
+  btnSearch.addEventListener('click', async () => {
     const movies = await getMovies(inputSearch.value)
     const moviesDetail = await getMovieDetail(movies);
     updateUI(moviesDetail)
